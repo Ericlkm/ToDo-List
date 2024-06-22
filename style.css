@@ -74,6 +74,13 @@
   padding: 0.7rem;
   transform: translateY(3px);
 }
+#add {
+  background-color: rgb(62, 255, 120);
+  transition: all 0.3s ease-in-out;
+}
+#add:hover {
+  background-color: rgb(6, 216, 69);
+}
 span {
   transition: all 0.2s ease-in-out;
 }
@@ -84,7 +91,7 @@ span:hover {
   display: flex;
   flex-direction: column;
   width: 50rem;
-  min-height: 30rem;
+  min-height: 20rem;
   margin: auto;
   margin-top: 5rem;
   background-image: linear-gradient(45deg, rgb(81, 8, 95), rgb(5, 38, 100));
@@ -299,4 +306,28 @@ body {
 }
 .testimonial .card:hover .content .details span {
   color: #fff;
+}
+.fa-brands {
+  transition: all 0.3s ease-in-out;
+}
+.fa-brands:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 0px 5px white;
+}
+
+.footer {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 1rem;
+}
+
+.warning {
+  font-size: 1.5rem;
+  margin: 1px 1rem;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 5px;
+  font-weight: bolder;
+  display: none;
 }

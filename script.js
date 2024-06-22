@@ -3,9 +3,12 @@ const clearbBtn = document.getElementById("clear");
 const listBox = document.getElementById("listBox");
 const listGroup = document.querySelector(".list-group");
 const input = document.querySelector(".input");
+const warning = document.querySelector(".warning");
 
 function addToList(item) {
   if (input.value !== "") {
+    warning.style.display = "none";
+
     const li = document.createElement("li");
     const span = document.createElement("span");
     const icon = document.createElement("i");
@@ -21,7 +24,12 @@ function addToList(item) {
     input.value = "";
     saveData();
   } else {
-    alert("Please enter an item to add to the list");
+    warning.style.display = "block";
+    warning.innerHTML = `
+    <div class="alert alert-danger" role="alert">
+    <i class="fas fa-exclamation-triangle fa-flip" style='font-size:2rem;'></i>
+    <strong>Warning!</strong> Please enter a value.
+    `;
   }
 }
 
@@ -62,5 +70,6 @@ $("#info").click(function (e) {
   $(".todo-container").fadeIn(1000);
   if ($(".todo-container").is(":visible")) {
     $(".testimonial").slideUp(1000);
+    $(".footer").fadeOut(1000);
   }
 });
