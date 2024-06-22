@@ -1,0 +1,302 @@
+.rock-salt-regular {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.major-mono-display-regular {
+  font-family: "Major Mono Display", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+#body {
+  background-color: black;
+  min-height: 100vh;
+}
+
+.title {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+  margin: 2rem;
+  background-image: linear-gradient(45deg, rgb(255, 255, 255), red, cyan);
+  background-size: 700%;
+  background-clip: text;
+  color: transparent;
+  animation: bge 10s linear infinite;
+}
+@keyframes bge {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.list-group-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem;
+  font-size: 1.6rem;
+  margin: 1rem;
+  border: none;
+  overflow-x: auto;
+  text-wrap: pretty;
+  transition: all 0.3s ease-in-out;
+}
+
+.list-group-item:hover {
+  cursor: pointer;
+  background-color: rgb(201, 247, 243);
+}
+.list-group {
+  overflow-y: auto;
+}
+.listBox {
+  width: 45rem;
+  margin: 1rem;
+}
+.container {
+  text-align: center;
+  margin: 1rem;
+}
+
+.input {
+  outline: none;
+  border: none;
+  width: 15rem;
+
+  border-radius: 5px;
+  padding: 0.7rem;
+  transform: translateY(3px);
+}
+span {
+  transition: all 0.2s ease-in-out;
+}
+span:hover {
+  transform: translateY(-5px);
+}
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+  min-height: 30rem;
+  margin: auto;
+  margin-top: 5rem;
+  background-image: linear-gradient(45deg, rgb(81, 8, 95), rgb(5, 38, 100));
+  background-size: 700%;
+  border-radius: 10px;
+  padding: 2rem;
+  animation: bge 10s infinite alternate-reverse;
+  display: none;
+}
+
+.done {
+  text-decoration: line-through;
+  position: relative;
+}
+
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.intro-container {
+  width: 80%;
+  margin: 40px auto;
+  text-align: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(128, 0, 128, 0.479),
+    rgba(0, 0, 255, 0.479)
+  );
+  padding: 2rem;
+  animation: todo-list 1s ease-in-out;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 20rem;
+  height: 10rem;
+  border-radius: 10%;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.list-icon {
+  font-size: 48px;
+  background-image: linear-gradient(
+    45deg,
+    rgb(4, 175, 255),
+    rgb(255, 255, 255)
+  );
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 20px;
+}
+
+.animate {
+  position: relative;
+}
+
+.todo-list {
+  opacity: 0;
+  animation: todo-list 2s forwards;
+  animation-delay: 0.8s;
+  font-weight: bolder;
+}
+
+.todo-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo-list li {
+  padding: 10px;
+  border-bottom: 1px solid #000000;
+  color: black;
+  font-weight: bolder;
+}
+
+.todo-list li:last-child {
+  border-bottom: none;
+}
+
+@keyframes checkmark {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes todo-list {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nav-title {
+  font-family: "Rock Salt", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  color: black;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.nav-title:before,
+.nav-title:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  top: 50%;
+  margin-top: -0.5px;
+  background: #fd0202;
+}
+
+.nav-title:before {
+  left: -2.5px;
+}
+.nav-title:after {
+  right: 2.5px;
+  background: #ff0303;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nav-title:hover:before {
+  background: #ec8f8f;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.nav-title:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+.testimonial .card {
+  position: relative;
+  margin: 2rem auto;
+  width: 60rem;
+  background: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+.testimonial .card .layer {
+  position: absolute;
+  top: calc(100% - 2px);
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(#03a8f4ad, #e91ee294);
+  z-index: 1;
+  transition: 0.5s;
+}
+.testimonial .card:hover .layer {
+  top: 0;
+}
+.testimonial .card .content {
+  position: relative;
+  z-index: 2;
+}
+.testimonial .card .content p {
+  font-size: 18px;
+  line-height: 24px;
+}
+.testimonial .card .content .image {
+  width: 128px;
+  height: 128px;
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.testimonial .card .content .details h2 {
+  font-size: 18px;
+}
+.testimonial .card .content .details span {
+  color: #03a9f4;
+  font-size: 14px;
+  transition: 0.5s;
+}
+.testimonial .card:hover .content .details span {
+  color: #fff;
+}
