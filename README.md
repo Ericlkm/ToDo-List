@@ -1,8 +1,18 @@
 # TodoApp
 
-# Overview
+## Table of Contents
 
-## TodoApp is a simple and user-friendly application that helps you stay organized and on top of your tasks. With its clean and intuitive interface, you can easily create, manage, and track your to-do items.
+- [Description](#description)
+- [Features](#Features)
+- [installation](#installation)
+- [Contributing](#contributing)
+- [Technologies](#Technologies)
+- [License](#license)
+- [contact](#contact)
+
+## Description
+
+### TodoApp is a simple and user-friendly application that helps you stay organized and on top of your tasks. With its clean and intuitive interface, you can easily create, manage, and track your to-do items.
 
 ## Features
 
@@ -22,16 +32,13 @@ To run the #TodoApp locally, follow these steps:
 
 Clone the repository: git clone https://github.com/ericlkm/toDo-List
 Navigate to the project directory: cd todo-app
-Install dependencies: npm install
-Start the development server: npm start
 Open your browser and visit: http://localhost:3000
 
 ## Technologies
 
-React.js
-Node.js
-Express.js
-MongoDB (or any other database you're using)
+HTML
+JavaScript
+CSS
 
 ## Contributing
 
@@ -52,3 +59,5 @@ This project is licensed under the MIT License.
 # Contact
 
 If you have any questions, suggestions, or feedback, please feel free to reach out to me
+
+[My GitHub Profile](https://github.com/ericlkm)
