@@ -35,8 +35,7 @@ ResponsiveDesign: The app is optimized for various screen sizes, ensuring a seam
 To run the #TodoApp locally, follow these steps:
 
 Clone the repository: git clone https://github.com/ericlkm/toDo-List
-Navigate to the project directory: cd todo-app
-Open your browser and visit: http://localhost:3000
+Open index.html file wit live server
 
 ## Technologies
 
