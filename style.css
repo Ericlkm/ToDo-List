@@ -102,11 +102,6 @@ span:hover {
   display: none;
 }
 
-.done {
-  text-decoration: line-through;
-  position: relative;
-}
-
 body {
   background-color: #f9f9f9;
   margin: 0;
@@ -213,7 +208,7 @@ body {
 }
 .nav-title {
   font-family: "Rock Salt", cursive;
-  font-weight: 400;
+  font-weight: 900;
   font-style: normal;
   font-size: 1.8rem;
   margin-right: 1rem;
@@ -221,6 +216,10 @@ body {
   position: relative;
   display: block;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.nav-title:hover {
+  color: rgb(156, 80, 255);
 }
 
 .nav-title:before,
@@ -229,7 +228,8 @@ body {
   position: absolute;
   width: 0%;
   height: 2px;
-  top: 50%;
+
+  bottom: 0;
   margin-top: -0.5px;
   background: #fd0202;
 }
@@ -300,7 +300,7 @@ body {
   font-size: 18px;
 }
 .testimonial .card .content .details span {
-  color: #03a9f4;
+  color: #99f5f8;
   font-size: 14px;
   transition: 0.5s;
 }
@@ -308,11 +308,12 @@ body {
   color: #fff;
 }
 .fa-brands {
+  color: darkblue;
   transition: all 0.3s ease-in-out;
 }
 .fa-brands:hover {
   transform: translateY(-4px);
-  color: rgb(255, 88, 88);
+  color: rgb(88, 174, 255);
 }
 
 .footer {
@@ -333,8 +334,148 @@ body {
 }
 .fa-mail-bulk {
   transition: all 0.3s ease-in-out;
+  color: rgb(51, 204, 255);
 }
 .fa-mail-bulk:hover {
   transform: translateY(-4px);
   color: rgb(62, 91, 255);
+}
+
+.done {
+  /* text-decoration: line-through red; */
+  transform: translateY(-1px);
+  position: relative;
+  z-index: 1;
+}
+.done::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  top: 2.5rem;
+  bottom: 0;
+  left: 1rem;
+  background-color: rgb(253, 0, 0);
+  animation: slideSide 1s ease-in-out;
+}
+
+.done:hover::before:active {
+  transform: scaleX(1);
+  transform-origin: right;
+}
+.done::after {
+  content: "\2713";
+  position: absolute;
+  height: 10%;
+  color: rgb(9, 165, 61);
+  top: 1rem;
+  left: 0;
+  z-index: -1;
+  animation: slideIn 0.3s ease-in-out;
+}
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideSide {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.navbar-nav a {
+  font-weight: bold;
+  margin: auto 1rem;
+  font-family: "Rock Salt", cursive;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: black;
+}
+
+.navbar-nav a:hover {
+  color: #03a9f4;
+}
+#warning-icon {
+  text-shadow: 2px 0px 3px black;
+}
+
+/* ai styles */
+a {
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+
+a::before,
+a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+a::before {
+  background-color: #92f8ff;
+  height: 2px;
+  bottom: 0;
+  transform-origin: 100% 50%;
+  transform: scaleX(0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+a::after {
+  content: attr(data-replace);
+  height: 100%;
+  top: 0;
+  transform-origin: 100% 50%;
+  transform: translate3d(200%, 0, 0);
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+  color: #00e1ff;
+}
+
+a:hover::before {
+  transform-origin: 0% 50%;
+  transform: scaleX(1);
+}
+a:hover::after {
+  transform: translate3d(0, 0, 0);
+}
+
+a span {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+a:hover span {
+  transform: translate3d(-200%, 0, 0);
+}
+
+/* Presentational Styles */
+
+a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 700;
+  vertical-align: top;
+}
+
+.arrow {
+  transition: all 0.3s ease-in-out;
+  margin: 1rem;
+}
+.arrow:hover {
+  cursor: pointer;
+  margin-right: 0.5rem;
 }

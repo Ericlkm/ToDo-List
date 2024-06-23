@@ -27,8 +27,8 @@ function addToList(item) {
     warning.style.display = "block";
     warning.innerHTML = `
     <div class="alert alert-danger" role="alert">
-    <i class="fas fa-exclamation-triangle fa-flip" style='font-size:2rem;'></i>
-    <strong>Warning!</strong> Please enter a value.
+    <i id="warning-icon" class="fas fa-exclamation-triangle fa-flip" style='font-size:2rem; color:yellow;'></i>
+    <strong>Warning!</strong> Please enter a value 🚫.
     `;
   }
 }
@@ -42,10 +42,8 @@ function deleteOne(e) {
     e.target.parentElement.parentElement.remove();
     saveData();
   } else {
-    return;
-  }
-  if (e.target.tagName === "LI") {
-    e.target.parentElement.parentElement.remove();
+    e.target.classList.toggle("done");
+    saveData();
   }
 }
 
@@ -70,6 +68,6 @@ $("#info").click(function (e) {
   $(".todo-container").fadeIn(1000);
   if ($(".todo-container").is(":visible")) {
     $(".testimonial").slideUp(1000);
-    $(".footer").fadeOut(1000);
+    $(".footer").slideUp("slow");
   }
 });
