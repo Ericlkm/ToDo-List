@@ -24,7 +24,8 @@ function addToList(item) {
     input.value = "";
     saveData();
   } else {
-    warning.style.display = "block";
+    $(".warning").fadeIn(1000);
+    warning.style.display = "inline";
     warning.innerHTML = `
     <div class="alert alert-danger" role="alert">
     <i id="warning-icon" class="fas fa-exclamation-triangle fa-flip" style='font-size:2rem; color:yellow;'></i>
@@ -34,6 +35,7 @@ function addToList(item) {
 }
 
 function clearList() {
+  warning.style.display = "none";
   listGroup.innerHTML = "";
   saveData();
 }

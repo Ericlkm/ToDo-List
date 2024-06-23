@@ -62,7 +62,7 @@
 }
 .container {
   text-align: center;
-  margin: 1rem;
+  margin: auto;
 }
 
 .input {
@@ -94,12 +94,22 @@ span:hover {
   min-height: 20rem;
   margin: auto;
   margin-top: 5rem;
-  background-image: linear-gradient(45deg, rgb(81, 8, 95), rgb(5, 38, 100));
+  background-image: linear-gradient(
+    45deg,
+    rgba(128, 0, 128, 0.479),
+    rgb(3, 114, 148)
+  );
   background-size: 700%;
   border-radius: 10px;
   padding: 2rem;
   animation: bge 10s infinite alternate-reverse;
+  box-shadow: 0px 0px 10px white;
+  transition: all 0.3s ease-in-out;
   display: none;
+}
+.todo-container:hover {
+  box-shadow: 0px 0px 10px rgb(113, 0, 136), 0px 0px 5px white;
+  transform: translateY(-5px);
 }
 
 body {
@@ -114,13 +124,14 @@ body {
   text-align: center;
   background-image: linear-gradient(
     to bottom,
-    rgba(128, 0, 128, 0.479),
+    rgba(187, 0, 187, 0.685),
     rgba(0, 0, 255, 0.479)
   );
   padding: 2rem;
   animation: todo-list 1s ease-in-out;
   border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.774),
+    0 6px 20px 0 rgba(222, 57, 255, 0.658);
 }
 
 .logo {
@@ -342,10 +353,10 @@ body {
 }
 
 .done {
-  /* text-decoration: line-through red; */
   transform: translateY(-1px);
   position: relative;
   z-index: 1;
+  color: rgb(168, 168, 168);
 }
 .done::before {
   content: "";
